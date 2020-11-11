@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 
 class NavbarMenu extends Component {
     render() {
+        const {cartCount} = this.props
         return (
             <Navbar bg="dark" expand="lg" variant="dark">
                 <Container>
@@ -12,7 +13,7 @@ class NavbarMenu extends Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <NavLink className="nav-link" to="/products">Products</NavLink>
-                            <NavLink className="nav-link" to="/cart">Cart</NavLink>
+                            <NavLink className="nav-link" to="/cart">Cart<sup>{cartCount}</sup></NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

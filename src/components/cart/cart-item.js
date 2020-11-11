@@ -3,16 +3,17 @@ import {Card} from "react-bootstrap";
 
 class CartItem extends Component {
     render() {
+        const {text, image, price, id} = this.props
         return (
             <div className="Main ">
-                     <img variant="top" src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/shopping_cart_full.png" className="MAIN"/>
-                <p className="Text">Мы продаем только фальшивые товары и мы хотим вас развести так что покупайте а мы вас ограбим!))</p>
+                <Card.Img variant="top" src={image} className="MAIN"/>
+                <p className="Text">{text}</p>
                 <div className="Function">
-                    <button className="btn btn-outline-success" style={{padding:"2px", marginLeft:"10px"}}>Buy</button>
-                    <button className="btn btn-outline-danger" style={{padding:"2px", marginLeft:"10px"}}>Add</button>
-                    <span style={{padding:"2px", marginLeft:"10px"}}>Price:</span>
-                    <span style={{padding:"2px", marginLeft:"10px"}}>100</span>
-                    <span style={{padding:"2px", marginLeft:"10px"}}>RUB</span>
+                    <button className="btn btn-outline-success"
+                            style={{padding: "2px", marginLeft: "10px"}}>Buy</button>
+                    <button className="btn btn-outline-danger"
+                            style={{padding: "2px", marginLeft: "10px"}}>Add</button>
+                    <span style={{padding: "2px", marginLeft: "10px"}}>{price}</span>
                 </div>
             </div>
         );

@@ -2,7 +2,7 @@
     margin-top: 30px;
     position: relative;
     top: 50%;
-    left: 20%;
+    left: 10%;
     height: 416px;
     width: 339px;
     background-color: azure;
@@ -11,17 +11,13 @@
 }
 .MAIN{
     position: absolute;
-    left: 50px;
-    top: 50px;
-    height: 196px;
-    width: 196px;
-    transition: .3s;
+    left: 22px;
+    top: 5px;
+    height: 250px;
+    width: 290px;
     cursor: pointer;
     margin-top: 10px;
-}
-img  :hover .MAIN{
-    transition: .3s;
-    transform: scale(1.1);
+    border-radius: 20px;
 }
 .Text{
     position: absolute;

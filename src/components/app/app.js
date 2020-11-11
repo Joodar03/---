@@ -10,60 +10,69 @@ class App extends Component {
         data: [
             {
                 id: 12,
-                title: "Card Title",
+                title: "Card Title1",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
                 price:120
             },
             {
                 id: 24,
-                title: "Card Title",
+                title: "Card Title2",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
                 price:120
             },
             {
                 id: 45,
-                title: "Card Title",
+                title: "Card Title3",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
                 price:120
             },
             {
-                id: 45,
-                title: "Card Title",
+                id: 56,
+                title: "Card Title4",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                price:120
+                price:121000
             },
             {
-                id: 45,
-                title: "Card Title",
+                id: 67,
+                title: "Card Title5",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-                price:120
+                price:111000000000000
             },
             {
-                id: 45,
-                title: "Card Title",
+                id: 78,
+                title: "Card Title6",
                 image: "/product.webp",
                 text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
                 price:120
             }
+        ],
+        cart:[
+
         ]
     }
-
+    addToCart = (id) => () =>{
+        this.setState(({cart, data})=>{
+            const item ={...data.find((item)=> item.id===id)}
+            return {cart:[...cart,item]}
+        })
+    }
     render() {
+        const cartCount = this.state.cart.length
         return (
             <BrowserRouter>
                 <div>
-                    <NavbarMenu/>
+                    <NavbarMenu cartCount={cartCount}/>
                     <Switch>
                         <Route exact path="/products">
-                            <Products data={this.state.data}/>
+                            <Products addToCart={this.addToCart} data={this.state.data}/>
                         </Route>
                         <Route exact path="/cart">
-                            <Cart/>
+                            <Cart data={this.state.cart}/>
                         </Route>
                     </Switch>
                 </div>

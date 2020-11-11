@@ -7,7 +7,7 @@ class Cart extends Component {
         return (
             <Container>
                 <h1 className="Animation">Cart</h1>
-                <CartItem/>
+                {this.props.data.map((item)=><CartItem key={item.id} {...item}/>)}
             </Container>
         );
     }
