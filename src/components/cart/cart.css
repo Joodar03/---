@@ -1,0 +1,91 @@
+.Main{
+    margin-top: 30px;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    height: 416px;
+    width: 339px;
+    background-color: azure;
+    box-shadow: 10px 0px 15px  5px darkgrey;
+    border-radius: 25px;
+}
+.MAIN{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    height: 196px;
+    width: 196px;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+img  :hover .MAIN{
+    transition: .3s;
+    transform: scale(1.1);
+}
+.Text{
+    position: absolute;
+    top: 70%;
+    font-size: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: 5px;
+    border-bottom: 2px solid darkgrey;
+}
+.Function{
+    top: 85%;
+    left: 5px;
+    position: absolute;
+}
+.Animation{
+    animation-name: TEXT;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+}
+@keyframes TEXT {
+    0%{
+        top: 30%;
+        color: red;
+        transform: scale(1.2);
+    }
+    10%{
+        color: brown;
+        top: 31%;
+    }
+    20%{
+        color: green;
+        top: 40%;
+    }
+    30%{
+        color: fuchsia;
+        top: 50%;
+    }
+    40%{
+        color: blue;
+        top: 60%;
+    }
+    50%{
+        color: orangered;
+        top: 50%;
+    }
+    60%{
+        color: yellow;
+        top: 40%;
+    }
+    70%{
+        color: purple;
+        top: 31%;
+    }
+    80%{
+        color: aqua;
+    }
+    90%{
+        color: lime;
+    }
+    100%{
+        top: 30%;
+        color: red;
+        transform: scale(1);
+    }
+}
